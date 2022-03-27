@@ -1,0 +1,15 @@
+1 XXX
+on load show first 50 monsters
+show name, age, description
+for id 1-50 
+res.slice(0, 51)
+id[0]
+creat ul, then for each li
+
+2
+form to create new monster
+name age description boxes
+button
+
+
+3
