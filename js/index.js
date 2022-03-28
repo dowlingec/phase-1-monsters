@@ -8,11 +8,6 @@ const requestApi = async() => {
     //d2
     
     let firstFifty = res.slice(0, 50)
-    // const createList = (array) => {
-    //     let listTag = document.createElement('li')
-    //     monsterContainer.appendChild(listTag)
-    // }
-    
     firstFifty.forEach((elemente) => {
         let monsterContainer = document.getElementById('monster-container')
         // console.log('ffirst50', firstFifty)
@@ -22,14 +17,28 @@ const requestApi = async() => {
         pgh.innerHTML = (`AGE: ${elemente.age} <br> Description: ${elemente.description}`)
         monsterContainer.appendChild(h3)
         monsterContainer.appendChild(pgh)
-        // newLi.innerText = elemente.title
-        // movieListParent.appendChild(newLi)
+    })
+
+    let formContainer = document.getElementById('create-monster')
+
+    let inputName = document.createElement('input')
+    inputName.setAttribute("placeholder", "Monster Name")
+    formContainer.appendChild(inputName)
+    let inputAge = document.createElement('input')
+    inputAge.setAttribute("placeholder", "Age")
+    formContainer.appendChild(inputAge)
+    let inputDesc = document.createElement('input')
+    inputDesc.setAttribute("placeholder", "Description")
+    formContainer.appendChild(inputDesc)
+
+    let createBttn = document.createElement('button')
+    createBttn.setAttribute("type", "submit")
+    createBttn.innerHTML = "Create Monster"
+    formContainer.appendChild(createBttn)
+
+    createBttn.addEventListener("click", () => {
+        // alert("I been clicked, I 'ave")
+        
     })
 }
 requestApi()
-
-// function createMenuItem(name) {
-//     let li = document.createElement('li');
-//     li.textContent = name;
-//     return li;
-// }
